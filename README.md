@@ -7,6 +7,8 @@
 
 Everything is done on a client side and a data is not save anywhere, even in browser
 
+## [Demo](https://pawelgargula.github.io/filter-excel-data-by-qr/)
+
 ## Using NPM Packages
 
 - xlsx
