@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import {Html5Qrcode} from "html5-qrcode";
 
-export default function Reader({ setSearchingText }) {
+export default function BarcodeReader({ setSearchingText }) {
     const [reader, setReader] = useState(null)
     const [reading, setReading] = useState(false)
 

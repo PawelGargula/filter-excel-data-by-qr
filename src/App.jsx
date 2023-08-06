@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import ExcelReader from './components/ExcelReader'
-import Reader from './components/Reader'
+import BarcodeReader from './components/BarcodeReader'
 
 function App() {
   const [excelData, setExcelData] = useState(null)
@@ -14,13 +14,23 @@ function App() {
   return (
     <>
       <h1>Filter Excel data by QR/Barcode</h1>
-      <ExcelReader setExcelData={setExcelData}/>
-      {excelData && <p>Example of readed data: {excelData[0][0]} - {excelData[0][1]}</p>}
-      <label>Find by id </label>
-      <input type="text" value={searchingText} onChange={(e) => setSearchingText(e.target.value)} />
-      <Reader setSearchingText={setSearchingText}/>
-      <p><b>Information</b> {dataFoundValue}</p>
-
+      <div>
+        <ExcelReader setExcelData={setExcelData}/>
+        {excelData && <p>Your data structure: {excelData[0][0]} - {excelData[0][1]}</p>}
+      </div>
+      <div>
+        <h2>Find information by Id </h2>
+        <label>Id</label>
+        <input 
+          id="id" 
+          onChange={(e) => setSearchingText(e.target.value)} 
+          type="text" 
+          value={searchingText} 
+          placeholder='Enter id or read by camera'
+        />
+        <BarcodeReader setSearchingText={setSearchingText}/>
+        <p><b>Information</b> {dataFoundValue}</p>
+      </div>
     </>
   )
 }

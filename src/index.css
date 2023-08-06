@@ -1,0 +1,21 @@
+/* Normalize css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Genos', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
