@@ -9,17 +9,17 @@ function App() {
   const dataFound = excelData && excelData.find(eD => 
     eD[0].toString().toLowerCase() === searchingText.toString().toLowerCase()
   )
-  const dataFoundValue = dataFound ? dataFound[1] : "No information"
+  const dataFoundValue = dataFound ? dataFound[1] : "No informations"
   
   return (
     <>
       <h1>Filter Excel data by QR/Barcode</h1>
-      <div>
+      <div className='read-excel'>
         <ExcelReader setExcelData={setExcelData}/>
         {excelData && <p>Your data structure: {excelData[0][0]} - {excelData[0][1]}</p>}
       </div>
-      <div>
-        <h2>Find information by Id </h2>
+      <div className='find-information'>
+        <h2>Find Informations by Id </h2>
         <label>Id</label>
         <input 
           id="id" 
@@ -29,7 +29,7 @@ function App() {
           placeholder='Enter id or read by camera'
         />
         <BarcodeReader setSearchingText={setSearchingText}/>
-        <p><b>Information</b> {dataFoundValue}</p>
+        <p><b>Informations</b> {dataFoundValue}</p>
       </div>
     </>
   )

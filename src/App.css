@@ -1,0 +1,21 @@
+#root>* {
+    padding: 1rem 2rem;
+}
+
+h1,
+h2,
+h3 {
+    /* font-weight: normal; */
+}
+
+h1 {
+    background-color: var(--primary-color);
+}
+
+.read-excel {
+    background-color: var(--secondary-color);
+}
+
+.find-information {
+    background-color: var(--tertiary-color);
+}

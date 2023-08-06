@@ -17,8 +17,8 @@ export default function ExcelReader({ setExcelData }) {
       return (
         <div>
           <h2>Read Excel file</h2>
-          <p>Excel data should be of structure Id - Information (Id have to be in the first column)</p>
-          <label htmlFor="file">Choose Excel file to read</label>
+          <strong><p>Id have to be in the first column, rest are informations</p></strong>
+          <label htmlFor="file">Choose Excel file</label>
           <input type="file" accept='.xlsx, .xls' name="file" id="file" onChange={handleFileUpload}/>
         </div>
       )

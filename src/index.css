@@ -5,12 +5,22 @@
     box-sizing: border-box;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Genos', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
 }
 
 input,
@@ -18,4 +28,23 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+/* Variables */
+:root {
+    --primary-color: #252B48;
+    --secondary-color: #037543;
+    --tertiary-color: #445069;
+    --font-color: white;
+    font-size: 14px;
+}
+
+body {
+    color: var(--font-color);
+    background-color: var(--tertiary-color);
+    font-family: 'Genos', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-wrap: balance;
+    letter-spacing: .1rem;
 }
