@@ -32,10 +32,10 @@ select {
 
 /* Variables */
 :root {
-    --primary-color: #252B48;
-    --secondary-color: #037543;
-    --tertiary-color: #445069;
-    --font-color: white;
+    --primary-color: #F8F0E5;
+    --secondary-color: #EADBC8;
+    --tertiary-color: #DAC0A3;
+    --font-color: #102C57;
     font-size: 14px;
 }
 

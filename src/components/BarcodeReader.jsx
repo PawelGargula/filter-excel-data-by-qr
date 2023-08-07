@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 import {Html5Qrcode} from "html5-qrcode";
+import cameraIcon from '../assets/camera-svgrepo-com.svg'
+import cameraSlashIcon from '../assets/camera-slash-svgrepo-com.svg'
+import scrollToFinding from "../scrollToFinding"
 
 export default function BarcodeReader({ setSearchingText }) {
     const [reader, setReader] = useState(null)
@@ -14,7 +17,10 @@ export default function BarcodeReader({ setSearchingText }) {
         const config = { fps: 10, qrbox: { width: 250, height: 250 } };
         
         reader.start({ facingMode: "environment" }, config, qrCodeSuccessCallback)
-            .then(() => setReading(true))
+            .then(() => {
+              setReading(true)
+              scrollToFinding()
+            })
             .catch((err) => alert("Cannot start back camera"));
       }
     
@@ -32,8 +38,10 @@ export default function BarcodeReader({ setSearchingText }) {
         <>
             <button 
                 onClick={() => reading ? stopReading() : startReading()}
-            >{reading ? "Stop reading" : "Read code by camera"}</button>
-            <div id="reader"></div>
+                aria-label={reading ? "Stop reading" : "Read code by camera"}
+            >
+              <img src={reading ? cameraSlashIcon : cameraIcon} alt={reading ? "camera slash" : "camera"} />
+            </button>
         </>
       )
 }

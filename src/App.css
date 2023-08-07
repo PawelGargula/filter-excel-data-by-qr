@@ -1,11 +1,9 @@
 #root>* {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
 }
 
-h1,
-h2,
-h3 {
-    /* font-weight: normal; */
+body h2 {
+    margin-bottom: .4rem;
 }
 
 h1 {
@@ -16,6 +14,58 @@ h1 {
     background-color: var(--secondary-color);
 }
 
+input[type="file"] {
+    width: 240px;
+}
+
+/* Button of input[type=file] */
+input::file-selector-button {
+    font-weight: bold;
+    background-color: var(--font-color);
+    color: var(--primary-color);
+    padding: 0.6rem;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Find informations section */
 .find-information {
-    background-color: var(--tertiary-color);
+    min-height: 100dvh;
+}
+
+.find-information div.center-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+input[type="text"] {
+    background-color: #fff;
+    border: 3px solid var(--font-color);
+    border-radius: 6px;
+}
+
+input[type="text"] {
+    font-size: 1.2rem;
+    padding: .2rem .6rem;
+}
+
+img {
+    width: 46px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
