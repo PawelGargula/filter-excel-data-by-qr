@@ -12,7 +12,7 @@ function App() {
       eD[0].toString().toLowerCase() === searchingText.toString().toLowerCase()
     )
     return dataFound 
-      ? dataFound.slice(1).map((value) => <li key={value}>{value}</li>) 
+      ? dataFound.slice(1).map((value, index) => <li key={index}>{value}</li>) 
       : <li>No informations</li>
   }, [excelData, searchingText])
   
